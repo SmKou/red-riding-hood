@@ -3,10 +3,29 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
+/*
+
+ module.exports = {
+  mode: 'development',
+  entry: {
+    index: './src/index.js',
+    another: './src/another-module.js',
+  },
+   output: {
+    filename: '[name].bundle.js',
+     path: path.resolve(__dirname, 'dist'),
+   },
+ };
+*/
+
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        physics: './src/physics/main.js',
+        render: './src/render/main.js'
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {

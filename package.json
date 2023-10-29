@@ -21,10 +21,6 @@
         "webpack-cli": "^5.0.0",
         "webpack-dev-server": "^4.0.0"
     },
-    "dependencies": {
-        "planck": "^1.0.0-beta.16",
-        "stage-js": "^1.0.0-alpha.1"
-    },
     "scripts": {
         "build": "webpack --mode=development",
         "start": "npm run build && webpack serve --mode=development",
