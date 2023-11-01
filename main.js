@@ -1,31 +1,30 @@
 import './style.css'
 import init from './rendering/Context.js'
 
-let timeout = ''
-let app = {}
-
 const setApp = () => {
-    const body = document.querySelector('body')
     const cvs = document.getElementById('app')
-    cvs.width = body.clientWidth
-    cvs.height = body.clientHeight
+    cvs.width = window.innerWidth
+    cvs.height = window.innerHeight
     const { ctx } = init(cvs, '2d')
     return { cvs, ctx }
 }
 
 const draw = (app) => {
-    const thirdHeight = Math.floor(app.cvs.height / 3)
+    const width = app.cvs.width
+    const height = app.cvs.height
+    const thirdHeight = Math.floor(height / 4)
 
     app.ctx.fillStyle = '#000'
-    app.ctx.fillRect(0, 0, app.cvs.width, thirdHeight)
-    app.ctx.fillRect(0, 2 * thirdHeight, app.cvs.width, app.cvs.height - 2 * thirdHeight)
+    app.ctx.fillRect(0, 0, width, thirdHeight)
+    app.ctx.fillRect(0, 3 * thirdHeight, width, height - 3 * thirdHeight)
     
     app.frames = requestAnimationFrame(draw)
 }
 
-app = setApp()
-draw(app)
+let timeout = ''
 
+let app = setApp()
+draw(app)
 
 window.onresize = () => {
     if (!timeout)
