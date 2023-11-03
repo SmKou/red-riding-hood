@@ -1,6 +1,6 @@
 # Red Riding Hood
 
-By Stella Marie
+By: Stella Marie
 
 Red Riding Hood game format variations with custom physics and rendering
 
@@ -10,7 +10,7 @@ This project is a personal learning exercise.
 
 1.  Story in Game formats
 2.  Physics
-3.  Rendering [Canvas, WebGL, WebGPU]
+3.  Rendering
 
 Include:
 Game formats - refer to Game Formats list
@@ -75,4 +75,4 @@ _Status_: in-development
 [MIT](https://choosealicense.com/licenses/mit/)
 [License](./LICENSE)
 
-Copyright © 2023 SmKou
+Copyright © 2023 Sm Kou
