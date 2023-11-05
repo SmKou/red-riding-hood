@@ -17,8 +17,40 @@ Game formats - refer to Game Formats list
 Rendering - canvas, webgl, webgpu | with/out web workers
 PWA 
 
-### Game Formats list
+###
+
+Initialize rendering
+- set mode: [webgpu, webgl, 2d]
+- get context
+- set workerEnabled
+- set localStorage
+- set cloudStorage
+
+**Web Workers**
+```js
+workerEnabled = Boolean(window.Worker)
+if (window.Worker)
+    const worker = new Worker('worker.js')
+    worker.postMessage(data)
+    worker.onmessage = (e) => {
+        console.log(e.data)
+    }
+```
+
+```js
+onmessage = (e) => {
+    console.log(e)
+    e.data.forEach(datum => console.log(datum))
+    const result = doSth(e.data)
+    postMessage(result)
+}
+```
+
+## Game Formats list
 - Graphic adventure | side-view
+- Typed adventure
+- Fashion
+- Match3
 
 **Options**
 - First person shooter
@@ -34,8 +66,6 @@ PWA
 - Shooter
 - Stealth
 - Roguelike
-- Text Adventure
-- Graphic Adventure
 - Visual novel
 - Interactive movie
 - Physics
