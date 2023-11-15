@@ -4,22 +4,23 @@
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,700&family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
     <title>Red Riding Hood</title>
   </head>
   <body>
     <header>
         <h1>Red Riding Hood</h1>
-        <div class="quick-links">
-            <a href="/render/">Render</a>
-        </div>
         <div class="select">
-            <button id="toggle-select">Select a Game Format</button>
+            <button id="toggle-select">Select a Game Format <span class="closed">&#10148;</span></button>
             <div class="content">
                 <a href="game/graphic-adventure/">Graphic Adventure</a>
                 <a href="game/typed-adventure/">Typed Adventure</a>
             </div>
         </div>
     </header>
+    <main></main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
