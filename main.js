@@ -19,3 +19,10 @@ select.addEventListener('mouseleave', () => {
     toggle_arrow.classList.remove('open')
     toggle_arrow.classList.add('closed')
 })
+
+document.getElementById("graphic-btn").addEventListener("click", () => {
+	const cvs = document.createElement("canvas")
+	const ctx = cvs.getContext("2d")
+})
+
+document.getElementById("typed-btn").addEventListener("click", () => {})

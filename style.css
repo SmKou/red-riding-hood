@@ -30,6 +30,7 @@ body {
 header {
     width: 100%;
     padding: 1.2rem 2.4rem;
+	border-bottom: 0.1rem solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +77,7 @@ h1 {
     transform: translateY(-100%);
 }
 
-.select .content a {
+.select .content button {
     color: var(--shade);
     font-family: 'Nunito Sans';
     text-decoration: none;
@@ -89,12 +90,18 @@ h1 {
     transition: opacity 0.1s ease-in; 
 }
 
-.select.expand .content a {
+.select.expand .content button {
     width: 100%;
     padding: 0.8rem 0 0.8rem 1.2rem;
     border: 0.1rem solid transparent;
 }
 
-.select.expand .content a:hover { 
+.select.expand .content button:hover {
     background: var(--dark-parchment) 
+}
+
+main {
+	height: calc(100vh - 12rem);
+	margin: 2rem 1rem;
+	background: red
 }
