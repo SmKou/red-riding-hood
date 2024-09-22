@@ -1,3 +1,5 @@
+import tadv from './typed.js'
+import gadv from './graphic.js'
 import './style.css'
 
 const select = document.querySelector('.select')
